@@ -1,0 +1,28 @@
+<package>
+  <name>pepper_plymouth_ros</name>
+  <version>0.1.0</version>
+  <description>
+      A set of launch files and configuration files to control Plymouth University's Pepper robot with ROS
+  </description>
+  <maintainer email="severin.lemaignan@plymouth.ac.uk">Séverin Lemaignan</maintainer>
+  <license>BSD</license>
+
+  <author>Severin Lemaignan</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>tf</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>roslaunch</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>openni2_launch</run_depend>
+  <run_depend>depthimage_to_laserscan</run_depend>
+  <run_depend>nodelet</run_depend>
+</package>

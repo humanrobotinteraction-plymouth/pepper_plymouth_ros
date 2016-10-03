@@ -1,0 +1,18 @@
+global_costmap:
+
+    global_frame: /map
+
+    update_frequency: 2.
+    publish_frequency: 1.
+
+    plugins:
+        - {name: static_map, type: "costmap_2d::StaticLayer"}
+        - {name: inflation, type: "costmap_2d::InflationLayer"}
+        #- {name: ir, type: "range_sensor_layer::RangeSensorLayer"}
+
+    #ir:
+    #    topics: ["/ir_left", "/ir_center", "/ir_right"]
+    #    clear_threshold: 0.2
+    #    mark_threshold: 0.8
+
+
