@@ -38,6 +38,8 @@ Note: to enable the joystick control, press button **10** on the joystick, not
 Mapping
 -------
 
+![iMapping with gmapping](doc/mapping_pepper.png)
+
 Using `gmapping`:
 
 ```
@@ -46,6 +48,8 @@ $ roslaunch pepper_plymouth_nao mapping.launch
 
 Localisation
 ------------
+
+![Localisation with AMCL](doc/localisation_pepper.png)
 
 First, the map server:
 
@@ -58,11 +62,29 @@ Then, AMCL:
 $ rosrun amcl amcl scan:=/pepper_robot/laser
 ```
 
+To save the map, run:
+```
+$ rosrun map_server map_saver
+```
+**before** stopping ``gmapping``.
+
+
 Navigation
 ----------
 
+
+![Path planning](doc/motion_planning_pepper_rviz.png)
+
+Both localisation (using `AMCL`) and planning are provided from:
+
 ```
 roslaunch pepper_plymouth_ros nav.launch
+```
+
+A custom map can be provided:
+
+```
+roslaunch pepper_plymouth_ros nav.launch map:=<full path to your map.yaml>
 ```
 
 3D Perception
