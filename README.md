@@ -56,9 +56,39 @@ Then, AMCL:
 ```
 $ rosrun amcl amcl scan:=/pepper_robot/laser
 ```
+
 Navigation
 ----------
 
 ```
 roslaunch pepper_plymouth_ros nav.launch
 ```
+
+3D Perception
+-------------
+
+![doc/rgbd_pepper.png](Registered depth cloud)
+
+Until it is officially released, you might need to manually install ``pepper_bringup`` with the perception
+launch file: [https://github.com/ros-naoqi/pepper_robot/pull/27](get it here).
+
+Then it works 'out of the box'.
+
+Building a 3D voxel octomap
+---------------------------
+
+![doc/octomap_pepper.png](Octomap building with Pepper + ROS)
+
+You need the 3D perception pipeline up and running. See above.
+
+- First:
+``` 
+$ sudo apt install ros-kinetic-octo*
+```
+
+- then install by hand [https://github.com/OctoMap/octomap_mapping](octomap_mapping)
+- then:
+```
+$ roslaunch pepper_plymouth_ros octomap_mapping.launch
+```
+
