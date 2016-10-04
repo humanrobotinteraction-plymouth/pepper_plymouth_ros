@@ -1,6 +1,8 @@
 <launch>
 
-    <node name="map_server" pkg="map_server" type="map_server" args="$(find pepper_plymouth_ros)/maps/map.yaml"/>
+    <arg name="map"   default="$(find pepper_plymouth_ros)/maps/map.yaml" />
+
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
 
     <!-- not using any localization -> we assume that the /odom frame is always correct -->
     <!--<node name="map_odom_transform" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 /map /odom 10"/>-->
