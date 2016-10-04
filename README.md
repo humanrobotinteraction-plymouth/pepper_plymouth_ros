@@ -25,7 +25,7 @@ Teleop
 
 Required packages:
 - ``ros-<version>-joy``
-- ``nao_teleop``: http://wiki.ros.org/nao_teleop
+- ``nao_teleop``: [http://wiki.ros.org/nao_teleop](http://wiki.ros.org/nao_teleop)
 
 Then:
 ```
@@ -67,17 +67,17 @@ roslaunch pepper_plymouth_ros nav.launch
 3D Perception
 -------------
 
-![doc/rgbd_pepper.png](Registered depth cloud)
+![Registered depth cloud](doc/rgbd_pepper.png)
 
 Until it is officially released, you might need to manually install ``pepper_bringup`` with the perception
-launch file: [https://github.com/ros-naoqi/pepper_robot/pull/27](get it here).
+launch file: [get it here](https://github.com/ros-naoqi/pepper_robot/pull/27).
 
 Then it works 'out of the box'.
 
 Building a 3D voxel octomap
 ---------------------------
 
-![doc/octomap_pepper.png](Octomap building with Pepper + ROS)
+![Octomap building with Pepper + ROS](doc/octomap_pepper.png)
 
 You need the 3D perception pipeline up and running. See above.
 
@@ -86,7 +86,7 @@ You need the 3D perception pipeline up and running. See above.
 $ sudo apt install ros-kinetic-octo*
 ```
 
-- then install by hand [https://github.com/OctoMap/octomap_mapping](octomap_mapping)
+- then install by hand [octomap_mapping](https://github.com/OctoMap/octomap_mapping)
 - then:
 ```
 $ roslaunch pepper_plymouth_ros octomap_mapping.launch
