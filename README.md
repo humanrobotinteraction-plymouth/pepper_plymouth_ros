@@ -38,9 +38,10 @@ Note: to enable the joystick control, press button **10** on the joystick, not
 Mapping
 -------
 
-Using `gmapping`
+Using `gmapping`:
+
 ```
-$ rosrun gmapping slam_gmapping scan:=/pepper_robot/laser _odom_frame:=/odom _angularUpdate:="0.1" _linearUpdate:="0.1" _map_update_interval:="2" _maxRange:="1.5" _maxUrange:="1.3" _temporalUpdate:="0.5" _xmax:="10" _xmin:="-10" _ymax:="10" _ymin:="-10" _particles:="300" _delta:="0.02"
+$ roslaunch pepper_plymouth_nao mapping.launch
 ```
 
 Localisation

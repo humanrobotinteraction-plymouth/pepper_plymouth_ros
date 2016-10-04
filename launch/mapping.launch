@@ -1,6 +1,6 @@
 <launch>
     <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
-        <param name="scan" value="/pepper_robot/laser"/>
+        <remap from="/scan" to="/pepper_robot/laser"/>
         <param name="map_update_interval" value="2" />
         <param name="linearUpdate" value="0.1" />
         <param name="angularUpdate" value="0.1" />
@@ -12,6 +12,7 @@
         <param name="particles" value="300" />
         <param name="maxRange" value="1.5" />
         <param name="maxUrange" value="1.1" />
+        <param name="delta" value="0.02" />
     </node>
 
 </launch>
