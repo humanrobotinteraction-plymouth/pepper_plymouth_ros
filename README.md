@@ -20,6 +20,8 @@ Finally:
 roslaunch pepper_bringup pepper_full.launch
 ```
 
+![Some of Pepper's TF frames](doc/frames.png)
+
 Teleop
 ------
 
@@ -38,7 +40,7 @@ Note: to enable the joystick control, press button **10** on the joystick, not
 Mapping
 -------
 
-![iMapping with gmapping](doc/mapping_pepper.png)
+![Mapping with gmapping](doc/mapping_pepper.png)
 
 Using `gmapping`:
 
